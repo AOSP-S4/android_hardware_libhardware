@@ -314,6 +314,12 @@ public:
         ASSERT_EQ(0, keymaster_open(mod, &sDevice))
                 << "Should be able to open the keymaster device";
 
+<<<<<<< HEAD
+=======
+        ASSERT_EQ(KEYMASTER_MODULE_API_VERSION_0_2, mod->module_api_version)
+                << "Keymaster should implement API version 2";
+
+>>>>>>> 36ab8ed... keymaster: use new version fields in hw_module
         ASSERT_TRUE(sDevice->generate_keypair != NULL)
                 << "Should implement generate_keypair";
 
